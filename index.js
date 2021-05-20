@@ -35,8 +35,8 @@ app.use("/auth",auth);
 app.use("/assets/uploads", express.static(__dirname + "/assets/uploads"));
 
 mongoose.connect(
-         "mongodb://localhost:27017/healthShift",
-        //"mongodb+srv://Shubham:Shubh@health@19@cluster0.wyyca.mongodb.net/healthShiftDB?retryWrites=true&w=majority",
+         //"mongodb://localhost:27017/healthShift",
+        "mongodb+srv://Shubham:Shubh@health@19@cluster0.wyyca.mongodb.net/healthShiftDB?retryWrites=true&w=majority",
         /*"mongodb+srv://balu:mongopassword@cluster0.6ujrr.mongodb.net/example?retryWrites=true&w=majority",*/ { useNewUrlParser: true, useUnifiedTopology: true }
     )
     .then(() => {
