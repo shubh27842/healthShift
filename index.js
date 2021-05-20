@@ -38,6 +38,14 @@ app.use("/auth",auth);
 
 app.use("/assets/uploads", express.static(__dirname + "/assets/uploads"));
 
+
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "hellooo!!!",
+        url: `${req.protocol}://${req.get("host")}`,
+    });
+});
+
 mongoose.connect(
          //"mongodb://localhost:27017/healthShift",
         "mongodb+srv://Shubham:Shubh@health@19@cluster0.wyyca.mongodb.net/healthShiftDB?retryWrites=true&w=majority",
