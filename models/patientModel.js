@@ -39,15 +39,6 @@ const PatientSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
-	color: {
-		type: String
-	},
-	diary: {
-		type: [Schema.Types.Mixed]
-	},
-	recepies: {
-		type: [Schema.Types.Mixed]
-	},
 	appointments:  [{
 		doctor : {
 			type: Schema.Types.ObjectId,
